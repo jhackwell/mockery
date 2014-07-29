@@ -48,7 +48,7 @@ class Parameter
             }
         }
 
-        if (preg_match('/^Parameter #[0-9]+ \[ \<(required|optional)\> (?<typehint>\S+ )?.*\$' . $this->rfp->getName() . ' .*\]$/', $this->rfp->__toString(), $typehintMatch)) {
+        if (preg_match('/^Parameter #[0-9]+ \[ \<(required|optional)\> (?P<typehint>\S+ )?.*\$' . $this->rfp->getName() . ' .*\]$/', $this->rfp->__toString(), $typehintMatch)) {
             if (!empty($typehintMatch['typehint'])) {
                 return $typehintMatch['typehint'];
             }
